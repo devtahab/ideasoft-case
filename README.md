@@ -41,6 +41,7 @@ The Application has been developed and tested using MySQL.
 
 ## API Endpoints
 
+```test
 GET /api/products
 GET /api/customers
 
@@ -48,9 +49,11 @@ POST /api/orders
 POST /api/orders/preview
 
 GET /api/customers/{id}/orders
+```
 
 ## Design Decisions
 
+```test
 Order creation is wrapped in a database transaction.
 Products are locked using lockForUpdate() before stock validation and stock update operations.
 
@@ -59,10 +62,13 @@ New discount types can be added by creating a new class implementing the interfa
 
 Orders contain a status field (pending).
 This allows future extension of the order workflow such as payment, shipping and delivery states.
+```
 
 ## Assumptions
 
+```test
 For category 2 products, the "buy 6 get 1 free" rule is applied per product.
 If a customer buys 12 units of the same category 2 product, 2 units become free.
 
 For category 1 products, "cheapest product gets the 20 percent discount" rule is applied on line total of the product who has the cheapest price.
+```
