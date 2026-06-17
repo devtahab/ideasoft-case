@@ -24,7 +24,7 @@ The Application has been developed and tested using MySQL.
 
 ### Frontend
 ```bash
-    cd frontend
+    cd ideasoft-case/frontend
 
     npm install
 
