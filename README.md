@@ -8,7 +8,7 @@ The Application has been developed and tested using MySQL.
 
 ### Backend
 ```bash
-    git clone ...
+    git clone https://github.com/devtahab/ideasoft-case.git
     cd ideasoft-case
 
     cp .env.example .env
