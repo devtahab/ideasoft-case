@@ -17,7 +17,7 @@ The Application has been developed and tested using MySQL.
     
     docker compose exec -u sail laravel.test composer install
 
-    docker compose exec -u laravel.test php artisan key:generate
+    docker compose exec -u sail laravel.test php artisan key:generate
 
     docker compose exec -u sail laravel.test php artisan migrate:fresh --seed
 ```
@@ -26,7 +26,7 @@ The Application has been developed and tested using MySQL.
 ```bash
     cd frontend
 
-    nom install
+    npm install
 
     npm run dev
 ```
