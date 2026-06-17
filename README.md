@@ -41,7 +41,7 @@ The Application has been developed and tested using MySQL.
 
 ## API Endpoints
 
-```test
+```text
 GET /api/products
 GET /api/customers
 
@@ -53,7 +53,7 @@ GET /api/customers/{id}/orders
 
 ## Design Decisions
 
-```test
+```text
 Order creation is wrapped in a database transaction.
 Products are locked using lockForUpdate() before stock validation and stock update operations.
 
@@ -66,7 +66,7 @@ This allows future extension of the order workflow such as payment, shipping and
 
 ## Assumptions
 
-```test
+```text
 For category 2 products, the "buy 6 get 1 free" rule is applied per product.
 If a customer buys 12 units of the same category 2 product, 2 units become free.
 
