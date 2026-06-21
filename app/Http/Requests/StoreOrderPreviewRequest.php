@@ -34,12 +34,12 @@ class StoreOrderPreviewRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'items.required' => 'Products are needed for creating an order',
-            'items.min' => 'There should be at least one product for creating an order',
-            'items.*.product_id.required' => 'Product id is required for products in the order',
-            'items.*.product_id.exists' => 'One or more order products are not exist',
-            'items.*.quantity.required' => 'Quantity is required for products in the order',
-            'items.*.quantity.min' => 'Quantity should be one or more for the products',
+            'items.required' => 'Sipariş oluşturabilmek için ürün listesi gerekiyor',
+            'items.min' => 'Sipariş oluşturabilmek için en az bir ürün gerekiyor',
+            'items.*.product_id.required' => 'Ürünlerin id alanı boş olmamalı',
+            'items.*.product_id.exists' => 'Bir veya daha fazla ürün sistemde yok',
+            'items.*.quantity.required' => 'Ürünlerin miktarı beilrtilmek zorunda',
+            'items.*.quantity.min' => 'Ürünlerin miktarı en az bir olmalıdır',
         ];
     }
 }
