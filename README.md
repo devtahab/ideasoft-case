@@ -60,7 +60,12 @@ Products are locked using lockForUpdate() before stock validation and stock upda
 Discount rules are implemented through a common Discount interface.
 New discount types can be added by creating a new class implementing the interface and registering it in DiscountService.
 
-Orders contain a status field (pending).
+For future extensions for the order workflow such as shipment tracking and payment:
+- Shipment Model can be created with: order_id, status, tracking_number
+This way customers can see their orders shipping status by using the tracking_number
+- Payment can be managed through a webhook endpoint that receives requests from the payment provider.
+The webhook request will be handled by the PaymentController, and process will be delegated to the PaymentService.
+- Orders contain a status field (pending).
 This allows future upgrades or changes for the order workflow such as payment, shipping and delivery states.
 ```
 
